@@ -1,0 +1,25 @@
+/* Gitta TUI — Dark theme (default) */
+
+Screen {
+  background: #0f1117;
+  color: #e5e9f0;
+}
+
+.panel {
+  border: solid #1f2430;
+}
+
+TabbedContent > Tabs > Tab.-active {
+  background: #1f2430;
+  color: #a6accd;
+}
+
+TabbedContent > Tabs > Tab {
+  background: #0f1117;
+  color: #8b92a7;
+}
+
+Static {
+  padding: 1 2;
+}
+

@@ -10,15 +10,23 @@ readme = "docs/README.md"
 requires-python = ">=3.8"
 license = { text = "GPL-3.0" }
 authors = [{ name = "gg", email = "apt@njb.gg" }]
-homepage = "https://gegge01.github.io/gitta"
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Operating System :: POSIX :: Linux",
 ]
 
+[project.urls]
+Homepage = "https://gegge01.github.io/gitta"
+Source = "https://github.com/GeGGe01/gitta"
+
 [project.scripts]
 gitta = "gitta.cli:main"
+
+[project.optional-dependencies]
+tui = [
+  "textual>=0.47,<0.60",
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

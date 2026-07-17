@@ -20,9 +20,9 @@ overrides:
       Vcs-Browser: https://github.com/gegge01/gitta
       Vcs-Git: https://github.com/gegge01/gitta.git
 contents:
-  # Install Python sources into a fixed prefix
+  # Install Python module into Debian's dist-packages so `python3 -m gitta` works
   - src: ./src/gitta
-    dst: /usr/lib/gitta/gitta
+    dst: /usr/lib/python3/dist-packages/gitta
   # CLI launcher script into PATH
   - src: ./assets/gitta
     dst: /usr/bin/gitta

@@ -45,14 +45,14 @@ project/
 └── LICENSE
 ```
 
-## APT Installation
+## APT Installation (Cloudflare R2)
 
-Stable releases are published to GitHub Pages. Add the repo and key:
+Stable releases are published to Cloudflare R2 (public r2.dev). Add the repo and key:
 
 1) Import the public key (preferred: keyring path; first-time bootstrap):
 
 ```
-curl -fsSL https://gegge01.github.io/gitta/pubkey.asc \
+curl -fsSL https://pub-bb9a9de46d6b43c2aa928b0db39bc1e6.r2.dev/apt/pubkey.asc \
   | sudo tee /usr/share/keyrings/gitta-archive-keyring.asc >/dev/null
 ```
 
@@ -60,7 +60,7 @@ curl -fsSL https://gegge01.github.io/gitta/pubkey.asc \
 
 ```
 echo "deb [signed-by=/usr/share/keyrings/gitta-archive-keyring.asc] \
-  https://gegge01.github.io/gitta stable main" | sudo tee /etc/apt/sources.list.d/gitta.list
+  https://pub-bb9a9de46d6b43c2aa928b0db39bc1e6.r2.dev/apt stable main" | sudo tee /etc/apt/sources.list.d/gitta.list
 sudo apt update
 sudo apt install gitta
 ```
@@ -69,7 +69,7 @@ Nightly builds are available at `dists/nightly`:
 
 ```
 echo "deb [signed-by=/usr/share/keyrings/gitta-archive-keyring.asc] \
-  https://gegge01.github.io/gitta nightly main" | sudo tee /etc/apt/sources.list.d/gitta-nightly.list
+  https://pub-bb9a9de46d6b43c2aa928b0db39bc1e6.r2.dev/apt nightly main" | sudo tee /etc/apt/sources.list.d/gitta-nightly.list
 sudo apt update
 ```
 
@@ -80,3 +80,26 @@ Once the repo is configured and the key is installed, you can switch to managing
 
 sudo apt install gitta-archive-keyring
 ```
+
+## TUI (Text User Interface)
+
+Start the TUI:
+
+```
+gitta tui
+```
+
+If you don't have Textual installed, add the optional extra:
+
+```
+python -m pip install 'gitta[tui]'
+```
+
+Key bindings in TUI:
+- q: quit
+- r: refresh
+- s: switch to Status tab
+- g: switch to Graph tab
+- d: switch to Diff tab
+
+Planned panels: staging, commit dialog, stash, undo, and tag bump.

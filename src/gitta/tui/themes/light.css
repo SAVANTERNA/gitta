@@ -1,0 +1,25 @@
+/* Gitta TUI — Light theme */
+
+Screen {
+  background: #f6f7f9;
+  color: #1f2328;
+}
+
+.panel {
+  border: solid #d0d7de;
+}
+
+TabbedContent > Tabs > Tab.-active {
+  background: #e6edf3;
+  color: #24292f;
+}
+
+TabbedContent > Tabs > Tab {
+  background: #f6f7f9;
+  color: #57606a;
+}
+
+Static {
+  padding: 1 2;
+}
+

@@ -1,0 +1,25 @@
+/* Gitta TUI — Dracula-ish */
+
+Screen {
+  background: #282a36;
+  color: #f8f8f2;
+}
+
+.panel {
+  border: solid #44475a;
+}
+
+TabbedContent > Tabs > Tab.-active {
+  background: #44475a;
+  color: #bd93f9;
+}
+
+TabbedContent > Tabs > Tab {
+  background: #282a36;
+  color: #6272a4;
+}
+
+Static {
+  padding: 1 2;
+}
+
